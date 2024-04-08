@@ -1,8 +1,8 @@
 <h2>🗄️Cart Shop</h2>
 
-<p><a href="">Link project</a></p>
+<p><a href="https://calorie-tracker-omega.vercel.app/">Link project</a></p>
 
-<img src="https://github.com/BmAlkes/guitarLa/blob/main/src/assets/guitta.png?raw=true"/>
+<img src="https://github.com/BmAlkes/Calorie-tracker/blob/main/src/assets/Screenshot_40.png?raw=true"/>
 
 <hr/>
 
