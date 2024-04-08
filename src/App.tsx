@@ -1,6 +1,6 @@
 import logo from "./assets/fitness_2964514.png";
 import Form from "./components/Form";
-import { useEffect, useReducer } from "react";
+import { useEffect, useMemo, useReducer } from "react";
 import { activityReducer, initialState } from "./reducers/activity-reducer";
 import ActivityList from "./components/ActivityList";
 
@@ -11,6 +11,10 @@ function App() {
     localStorage.setItem("activity", JSON.stringify(state.activities));
   }, [state.activities]);
 
+  const canRestartApp = () =>
+    useMemo(() => state.activities.length, [state.activities]);
+
+  console.log(state.activities);
   return (
     <>
       <header className="bg-lime-600 py-3">
@@ -22,7 +26,11 @@ function App() {
             </h1>
           </div>
 
-          <button className="overflow-hidden  w-40 p-2 h-12 bg-slate-500 text-white border-none rounded-md text-xl font-bold cursor-pointer relative z-10 group">
+          <button
+            className="overflow-hidden  w-40 p-2 h-12 bg-slate-500 text-white border-none rounded-md text-xl font-bold cursor-pointer relative z-10 group"
+            disabled={!canRestartApp()}
+            onClick={() => dispatch({ type: "reset-activity" })}
+          >
             Clear
             <span className="absolute w-44 h-32 -top-8 -left-2 bg-green-200 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-bottom"></span>
             <span className="absolute w-44 h-32 -top-8 -left-2 bg-green-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-bottom"></span>
