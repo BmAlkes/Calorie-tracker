@@ -49,7 +49,7 @@ const Form = ({ dispatch, state }: FormProps) => {
   };
   return (
     <form
-      className="space-y-5 bg-white p-10 rounded-lg shadow-2xl"
+      className="space-y-5 bg-white p-10 rounded-lg shadow-2xl shadow-2xl"
       onSubmit={handleSubmit}
     >
       <div className="grid grid-cols-1 gap-3">
