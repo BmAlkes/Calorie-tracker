@@ -1,4 +1,4 @@
-<h2>🗄️Cart Shop</h2>
+<h2>🗄️Calorie Tracker</h2>
 
 <p><a href="https://calorie-tracker-omega.vercel.app/">Link project</a></p>
 
